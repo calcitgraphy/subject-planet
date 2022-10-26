@@ -1,4 +1,7 @@
 const action = document.getElementsByClassName('form-section-lable');
+const nav = document.getElementById('nav');
+const menu = document.getElementById('menu');
+const cansel = document.getElementById('close');
 
 for (i = 0; i < action.length; i++) {
     action[i].addEventListener('click', function () {
@@ -11,3 +14,11 @@ for (i = 0; i < action.length; i++) {
         }
     })
 }
+
+menu.addEventListener('click', function () {
+    nav.style.width = '100%';
+})
+
+cansel.addEventListener('click', function () {
+    nav.style.width = '0';
+})
