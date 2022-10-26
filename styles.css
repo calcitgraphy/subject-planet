@@ -11,7 +11,8 @@
     padding: 0;
 }
 
-html,body{
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -39,6 +40,14 @@ a {
     display: flex;
     padding: 0.5em;
     justify-content: space-between;
+}
+
+.close-btn {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
 }
 
 .logo {
@@ -280,6 +289,11 @@ header {
     border-radius: 45px;
 }
 
+.form-card:hover {
+    background: var(--main-color-light);
+    transition: 0.2s;
+}
+
 .form-card-description {
     padding: 0 1em;
 }
@@ -309,8 +323,40 @@ header {
         height: 100%;
     }
 
+    .nav-item {
+        flex-direction: column;
+        background: var(--main-color-light);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+    }
+
+    .menu-btn {
+        display: block;
+        cursor: pointer;
+    }
+
     .nav-link {
-        display: none;
+        padding-bottom: 1em;
+        margin: 1em;
+        transition: 0.3s;
+    }
+
+    .close-btn {
+        display: block;
+        z-index: 2;
+        top: 2%;
+        left: 80%;
+        position: absolute;
+        cursor: pointer;
     }
 
     .header-title h1 {
@@ -336,7 +382,7 @@ header {
     .header-button a {
         display: block;
         text-align: center;
-        
+
     }
 
     .section-title {
@@ -356,7 +402,7 @@ header {
     }
 
     .card-text {
-        padding: 0 ;
+        padding: 0;
     }
 
     .card-arrow {
@@ -387,7 +433,7 @@ header {
     .form-container {
         grid-template-columns: repeat(2, 1fr);
     }
-  }
+}
 
 @media(min-width: 764px) {
     .form-container {
@@ -399,4 +445,4 @@ header {
     .lesson-number {
         display: none;
     }
-  }
+}
